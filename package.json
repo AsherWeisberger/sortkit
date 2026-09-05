@@ -1,0 +1,33 @@
+{
+  "name": "sortkit",
+  "private": true,
+  "author": "Asher Weisberger (@AsherWeisberger)",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5240",
+    "sample": "bun scripts/sample.mjs",
+    "prebuild": "bun scripts/sample.mjs",
+    "build": "vite build && touch docs/.nojekyll",
+    "preview": "vite preview --host 127.0.0.1 --port 4240",
+    "qa": "bun scripts/qa.mjs",
+    "shot": "bun scripts/shot.mjs"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "4.10.38",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zustand": "^5.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "playwright-core": "^1.62.1",
+    "typescript": "^5.9.2",
+    "vite": "^6.3.5"
+  }
+}
