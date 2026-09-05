@@ -21,9 +21,9 @@ async function shot(path, size, withSample) {
   if (withSample) {
     await page.getByRole("button", { name: "Try sample" }).click();
     await page.waitForFunction(() => (window.__kit?.pages || 0) >= 5, { timeout: 120000 });
-    await page.waitForTimeout(800);
+    await page.waitForTimeout(2800);
   } else {
-    await page.waitForTimeout(800);
+    await page.waitForTimeout(2800);
   }
   await page.screenshot({ path, fullPage: false });
   await ctx.close();
